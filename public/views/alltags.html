@@ -1,0 +1,88 @@
+<div class="d-flex justify-content-end"><h1 ng-show='!dicomTags'>
+<i class="fa fa-spinner fa-spin" style="font-size:50px" > </i> File loading...</h1>
+  <div class="mr-auto p-2" style="width:100%;" ng-show="dicomTags" >
+  	<div class="align-self-start" style="padding: 10px;background-color:black;">
+		 <a href='' ui-sref='alltags({id:id})' ng-click="getTage(data)"><div class="card w-80 "  style="padding: 10px;">
+		   	<h3 style="border-bottom: 1px solid black;">Dicom Tags </h3>
+		    <div class="card-block"  ng-repeat="(key,value) in dicomTags track by $index" >
+		    
+		     <p><b>{{key}} </b> - <i ng-repeat="Keyvalue in value.Value track by $index">{{Keyvalue}}</i> </br>
+		     </p>
+		    </div>		   
+		  </div>
+		 </a> 
+	</div>
+  </div>
+  <div class="p-1 " style="background-color:black;">
+  	<div class='align-self-stretch' style="padding: 10px;border-right:1px solid black ">	
+		<div class="card w-100"  style="padding: 10px;width:200px;">
+		    <h3>patient - {{patient.PatientID }} </h3>
+		    <div class="card-block" >
+		      <p><b>PatientID </b> - {{patient.PatientID}}</p>
+		    
+		      <p><b>PatientSex </b> - {{patient.PatientSex}}</p>
+		      <p> to click on card to go furthure</p>
+		    </div>
+		  </div>
+		 
+	</div>
+	 <div class="p-1 " style="background-color:black;">
+  	<div class="align-self-start" style="padding: 10px;" >
+		 <div class="card w-80 "  style="padding: 10px;">
+		    <h3 style="border-bottom: 1px solid black;">StudyDescription - s{{study.MainDicomTags.StudyDescription }} </h3>
+		    <div class="card-block" >
+		     <p><b>AccessionNumber </b> - {{study.MainDicomTags.AccessionNumber}}</p>
+		    <p><b>StudyDescription </b> - {{study.MainDicomTags.StudyDescription}}</p>
+		      <p><b>InstitutionName </b> - {{study.MainDicomTags.InstitutionName}}</p>
+		      <p><b>Series </b> -  {{study.Series.length}}</p>
+		      <p><b>ReferringPhysicianName </b> - {{study.MainDicomTags.ReferringPhysicianName}}</p>
+		      <p><b>StudyID </b> - {{study.MainDicomTags.StudyID}}</p>
+		        <p><b>StudyInstanceUID </b> - {{study.MainDicomTags.StudyInstanceUID}}</p>
+		 
+		    </div>		   
+		  </div>
+		
+	</div>
+  </div>
+  <div class="p-1 " style="background-color:black;">
+  	<div class="align-self-start" style="padding: 10px;background-color:black;" >
+	<div class="card w-80 "  style="padding: 10px;">
+		   
+		    <div class="card-block" >
+		    <h3 style="border-bottom: 1px solid black;">{{$index+1}}  Type - {{indiSeries.Type }} </h3>
+		     <p><b>Status </b> - {{indiSeries.Status.AccessionNumbe}} </br>
+		     <b>BodyPartExamined </b> - {{indiSeries.MainDicomTags.BodyPartExamined}}</br>
+		     <b>ContrastBolusAgent </b> - {{indiSeries.MainDicomTags.ContrastBolusAgent}}</br>
+		     <b>Manufacturer </b> - {{indiSeries.MainDicomTags.Manufacturer}}</br>
+		     <b>Modality </b> - {{indiSeries.MainDicomTags.Modality}}</br>
+		     <b>OperatorsName </b> - {{indiSeries.MainDicomTags.OperatorsName}}</br>
+		     <b>SeriesNumber </b> - {{indiSeries.MainDicomTags.SeriesNumber}}</br>
+		     <b>ProtocolName </b> - {{indiSeries.MainDicomTags.ProtocolName}}</br>
+		      <b>SeriesInstanceUID </b> - {{indiSeries.MainDicomTags.SeriesInstanceUID}}</br>
+		     <b>StationName </b> - {{indiSeries.MainDicomTags.StationName}}</p>
+		   
+		 
+		    </div>		   
+		  </div>
+	
+	</div>
+  </div>
+   <div class="p-1 ">
+   	<div class="align-self-start" style="padding: 10px;background-color:black;">
+		<div class="card w-80 "  style="padding: 10px;">
+		   
+		    <div class="card-block" >
+		    <h3 style="border-bottom: 1px solid black;">  Type - {{intancesside.Type }} </h3>
+		     <p><b>SOPInstanceUID </b> - {{intancesside.MainDicomTags.SOPInstanceUID}} </br>
+		     </p>
+		    </div>		   
+		  </div>
+		
+	</div>
+	</div>  
+</div>
+
+
+
+
+

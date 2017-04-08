@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-end">
+  <div class="mr-auto p-2" style="width:100%;">
+  	<div class="align-self-start" style="padding: 10px;color:black;" ng-repeat="study in studies">
+		 <a href='' ui-sref='series({id:id})' ng-click="getTage()"><div class="card w-80 "  style="padding: 10px;">
+		    <h3 style="border-bottom: 1px solid black;">StudyDescription - s{{study.MainDicomTags.StudyDescription }} </h3>
+		    <div class="card-block" >
+		     <p><b>AccessionNumber </b> - {{study.MainDicomTags.AccessionNumber}}</p>
+		    <p><b>StudyDescription </b> - {{study.MainDicomTags.StudyDescription}}</p>
+		      <p><b>InstitutionName </b> - {{study.MainDicomTags.InstitutionName}}</p>
+		      <p><b>Series </b> -  {{study.Series.length}}</p>
+		      <p><b>ReferringPhysicianName </b> - {{study.MainDicomTags.ReferringPhysicianName}}</p>
+		      <p><b>StudyID </b> - {{study.MainDicomTags.StudyID}}</p>
+		        <p><b>StudyInstanceUID </b> - {{study.MainDicomTags.StudyInstanceUID}}</p>
+		 
+		    </div>		   
+		  </div>
+		 </a> 
+	</div>
+  </div>
+  <div class="p-1 ">
+  	<div class='align-self-stretch' style="padding: 10px;border-right:1px solid black ">	
+		 <a href='' ng-click="sendtostudies(patient)"><div class="card w-100"  style="padding: 10px;width:200px;">
+		    <h3>patient - {{patient.PatientID }} </h3>
+		    <div class="card-block" >
+		      <p><b>PatientID </b> - {{patient.PatientID}}</p>
+		    
+		      <p><b>PatientSex </b> - {{patient.PatientSex}}</p>
+		      <p> to click on card to go furthure</p>
+		    </div>
+		  </div>
+		  </a>
+	</div>
+  </div>
+  
+</div>
+
+
+
+
+

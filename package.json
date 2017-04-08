@@ -1,0 +1,29 @@
+{
+  "name": "comment-portal",
+  "version": "1.0.0",
+  "engines": {
+    "npm": "3.10.3",
+    "node": "6.9.1"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-timeout": "^1.8.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "http": "0.0.0",
+    "http-errors": "^1.5.1",
+    "mysql": "^2.11.1",
+    "q": "^1.5.0",
+    "request": "^2.81.0"
+  }
+}

@@ -1,0 +1,15 @@
+<div class='flex-column justify-content-center' style="padding: 10px">
+<div ng-repeat="patient in patients">
+  <a href='' ui-sref='patients({id:patient.ID})'><div class="card w-100 "  style="padding: 10px;">
+    <h3>{{patient.Type}} - {{patient.MainDicomTags.PatientID }} </h3>
+    <div class="card-block" >
+      <p><b>PatientID </b> - {{patient.MainDicomTags.PatientID}}</p>
+      <p><b>Studies </b> -  {{patient.Studies.length}}</p>
+      <p><b>PatientSex </b> - {{patient.MainDicomTags.PatientSex}}</p>
+      <p> to click on card to go furthure</p>
+    </div>
+   
+  </div>
+  </a>
+  </div>
+</div>
