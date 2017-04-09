@@ -1,5 +1,5 @@
 {
-  "name": "comment-portal",
+  "name": "dicomfile",
   "version": "1.0.0",
   "engines": {
     "npm": "3.10.3",
@@ -17,12 +17,10 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "connect-timeout": "^1.8.0",
-    "cookie-parser": "^1.4.3",
+    "dicom": "^0.4.2",
     "express": "^4.14.0",
-    "express-session": "^1.14.2",
     "http": "0.0.0",
     "http-errors": "^1.5.1",
-    "mysql": "^2.11.1",
     "q": "^1.5.0",
     "request": "^2.81.0"
   }
