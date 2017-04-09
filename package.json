@@ -11,8 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["dicom","dicom parser example","dicomjs use"],
+  "author": "manoj",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
