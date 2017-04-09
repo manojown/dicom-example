@@ -17,12 +17,15 @@ function service(){
   var deferred = q.defer();
     var url = 'http://35.154.52.109/instances/'+id+'/file';
     var dest = __dirname;
-    console.log(dest,url);
+    //console.log(dest,url);
    request.get( url )
      .on( 'response', function( res ){
 
         // extract filename
-        var filename = regexp.exec( res.headers['content-disposition'] )[1];
+       var fff = res.headers['content-disposition'];
+       var filename = fff.slice(fff.indexOf('"')+1,fff.length-1);
+       
+       // var filename = regexp.exec( res.headers['content-disposition'] )[1];
 
         // create file write stream
         var fws = Fs.createWriteStream( dest+'/' + filename );

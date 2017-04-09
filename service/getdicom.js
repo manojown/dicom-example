@@ -22,7 +22,7 @@ function getdicom(){
     var print_element = function(json, elem) {
       console.log(json);
         if(json){
-          console.log(json);
+         // console.log(json);
           deferred.resolve(json);
         }else{
           deferred.reject('error in dicom conversion');
